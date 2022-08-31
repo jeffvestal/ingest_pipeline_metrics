@@ -1,0 +1,351 @@
+{
+  "data_view": {
+    "id": "df146523-f751-487c-9d00-968c5f066333",
+    "version": "WzU0NTIxLDJd",
+    "title": "pipeline_metrics-pipeline_processors",
+    "timeFieldName": "@timestamp",
+    "sourceFilters": [],
+    "fields": {
+      "pipeline.key": {
+        "count": 0,
+        "name": "pipeline.key",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": false,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "runtimeField": {
+          "type": "keyword",
+          "script": {
+            "source": """emit(doc['cluster.name'].value + '__'
+    + doc['node.name'].value + '__'
+    + doc['pipeline.name'].value
+)"""
+          }
+        }
+      },
+      "processor.key": {
+        "count": 0,
+        "name": "processor.key",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": false,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "runtimeField": {
+          "type": "keyword",
+          "script": {
+            "source": """emit(doc['cluster.name'].value + '__'
+    + doc['node.name'].value + '__'
+    + doc['pipeline.name'].value + '__'
+    + doc['pipeline.processor.name'].value
+)"""
+          }
+        }
+      },
+      "@timestamp": {
+        "count": 0,
+        "name": "@timestamp",
+        "type": "date",
+        "esTypes": [
+          "date"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "date"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "_id": {
+        "count": 0,
+        "name": "_id",
+        "type": "string",
+        "esTypes": [
+          "_id"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": false,
+        "readFromDocValues": false,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "_index": {
+        "count": 0,
+        "name": "_index",
+        "type": "string",
+        "esTypes": [
+          "_index"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": false,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "_score": {
+        "count": 0,
+        "name": "_score",
+        "type": "number",
+        "scripted": false,
+        "searchable": false,
+        "aggregatable": false,
+        "readFromDocValues": false,
+        "format": {
+          "id": "number"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "_source": {
+        "count": 0,
+        "name": "_source",
+        "type": "_source",
+        "esTypes": [
+          "_source"
+        ],
+        "scripted": false,
+        "searchable": false,
+        "aggregatable": false,
+        "readFromDocValues": false,
+        "format": {
+          "id": "_source"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "cluster.name": {
+        "count": 1,
+        "name": "cluster.name",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "node.name": {
+        "count": 1,
+        "name": "node.name",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.name": {
+        "count": 1,
+        "name": "pipeline.name",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.name": {
+        "count": 1,
+        "name": "pipeline.processor.name",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.stats.count": {
+        "count": 1,
+        "name": "pipeline.processor.stats.count",
+        "type": "number",
+        "esTypes": [
+          "integer"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "number"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.stats.current": {
+        "count": 1,
+        "name": "pipeline.processor.stats.current",
+        "type": "number",
+        "esTypes": [
+          "integer"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "number"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.stats.failed": {
+        "count": 1,
+        "name": "pipeline.processor.stats.failed",
+        "type": "number",
+        "esTypes": [
+          "integer"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "number"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.stats.time_in_millis": {
+        "count": 1,
+        "name": "pipeline.processor.stats.time_in_millis",
+        "type": "number",
+        "esTypes": [
+          "integer"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "number"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      },
+      "pipeline.processor.type": {
+        "count": 1,
+        "name": "pipeline.processor.type",
+        "type": "string",
+        "esTypes": [
+          "keyword"
+        ],
+        "scripted": false,
+        "searchable": true,
+        "aggregatable": true,
+        "readFromDocValues": true,
+        "format": {
+          "id": "string"
+        },
+        "shortDotsEnable": false,
+        "isMapped": true
+      }
+    },
+    "typeMeta": {},
+    "fieldFormats": {},
+    "runtimeFieldMap": {
+      "pipeline.key": {
+        "type": "keyword",
+        "script": {
+          "source": """emit(doc['cluster.name'].value + '__'
+    + doc['node.name'].value + '__'
+    + doc['pipeline.name'].value
+)"""
+        }
+      },
+      "processor.key": {
+        "type": "keyword",
+        "script": {
+          "source": """emit(doc['cluster.name'].value + '__'
+    + doc['node.name'].value + '__'
+    + doc['pipeline.name'].value + '__'
+    + doc['pipeline.processor.name'].value
+)"""
+        }
+      }
+    },
+    "fieldAttrs": {
+      "cluster.name": {
+        "count": 1
+      },
+      "node.name": {
+        "count": 1
+      },
+      "pipeline.name": {
+        "count": 1
+      },
+      "pipeline.processor.name": {
+        "count": 1
+      },
+      "pipeline.processor.stats.count": {
+        "count": 1
+      },
+      "pipeline.processor.stats.current": {
+        "count": 1
+      },
+      "pipeline.processor.stats.failed": {
+        "count": 1
+      },
+      "pipeline.processor.stats.time_in_millis": {
+        "count": 1
+      },
+      "pipeline.processor.type": {
+        "count": 1
+      }
+    },
+    "allowNoIndex": false,
+    "name": "Pipeline Processors"
+  }
+}
