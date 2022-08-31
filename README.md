@@ -15,6 +15,8 @@ This was addressed by this [GH Issue](https://github.com/elastic/elasticsearch/i
 You are **strongly encouraged** to only run this in the 7x on versions 7.17.4+ or 8x 8.2+
 
 
+## Running
+python ./main.py
 
 ### Environment Variables that must be set
 Monitoring Cluster
@@ -28,8 +30,7 @@ Monitoring Cluster
  - "es_cloud_user":    
  -  "es_cloud_pass":
 
-### Running
-python ./main.py
+
 
 ### Example Dashboard
 <img width="2238" alt="Elastic Ingest Pipeline Monitoring Dashboard" src="https://user-images.githubusercontent.com/53237856/187766429-6a474a74-e87a-4182-89f5-a0e4b3c05a11.png">
