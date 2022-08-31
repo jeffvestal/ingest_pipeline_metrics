@@ -1,0 +1,69 @@
+{
+        "template": {
+          "mappings": {
+            "dynamic_templates": [],
+            "properties": {
+              "pipeline": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "processor": {
+                    "dynamic": true,
+                    "type": "object",
+                    "enabled": true,
+                    "properties": {
+                      "stats": {
+                        "dynamic": true,
+                        "type": "object",
+                        "enabled": true,
+                        "properties": {
+                          "current": {
+                            "type": "integer"
+                          },
+                          "time_in_millis": {
+                            "type": "integer"
+                          },
+                          "count": {
+                            "type": "integer"
+                          },
+                          "failed": {
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "name": {
+                        "type": "keyword"
+                      },
+                      "type": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "cluster": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "node": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "@timestamp": {
+                "type": "date"
+              }
+            }
+          }
+        }
+
+}

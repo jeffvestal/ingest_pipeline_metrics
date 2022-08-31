@@ -1,0 +1,90 @@
+{
+      "component_template": {
+        "template": {
+          "mappings": {
+            "dynamic_templates": [],
+            "properties": {
+              "pipeline": {
+                "type": "object",
+                "properties": {
+                  "total": {
+                    "type": "object",
+                    "properties": {
+                      "current": {
+                        "coerce": true,
+                        "index": true,
+                        "ignore_malformed": false,
+                        "store": false,
+                        "type": "integer",
+                        "doc_values": true
+                      },
+                      "time_in_millis": {
+                        "coerce": true,
+                        "index": true,
+                        "ignore_malformed": false,
+                        "store": false,
+                        "type": "integer",
+                        "doc_values": true
+                      },
+                      "count": {
+                        "coerce": true,
+                        "index": true,
+                        "ignore_malformed": false,
+                        "store": false,
+                        "type": "integer",
+                        "doc_values": true
+                      },
+                      "failed": {
+                        "coerce": true,
+                        "index": true,
+                        "ignore_malformed": false,
+                        "store": false,
+                        "type": "integer",
+                        "doc_values": true
+                      }
+                    }
+                  },
+                  "name": {
+                    "eager_global_ordinals": false,
+                    "norms": false,
+                    "index": true,
+                    "store": false,
+                    "type": "keyword",
+                    "index_options": "docs",
+                    "split_queries_on_whitespace": false,
+                    "doc_values": true
+                  }
+                }
+              },
+              "node": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "eager_global_ordinals": false,
+                    "norms": false,
+                    "index": true,
+                    "store": false,
+                    "type": "keyword",
+                    "index_options": "docs",
+                    "split_queries_on_whitespace": false,
+                    "doc_values": true
+                  }
+                }
+              },
+              "cluster": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "@timestamp": {
+                "type": "date"
+              }
+            }
+          }
+        }
+      }
+    
+}

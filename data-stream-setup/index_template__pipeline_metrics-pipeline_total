@@ -1,0 +1,15 @@
+{
+
+        "index_patterns": [
+          "pipeline_metrics-pipeline_total"
+        ],
+        "composed_of": [
+          "pipeline_metrics-pipeline_total"
+        ],
+        "priority": 201,
+        "data_stream": {
+          "hidden": false,
+          "allow_custom_routing": false
+        }
+      
+}
